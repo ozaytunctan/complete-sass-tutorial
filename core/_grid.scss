@@ -8,25 +8,6 @@ $grid-gaps: (
   "3": 30px
 );
 $layout-values: start, end, center, space-between, space-around;
-
-// base layout classes
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-.row {
-  display: flex;
-
-$grid-columns: 12;
-$grid-gaps: (
-  "0": 0,
-  "1": 10px,
-  "2": 20px,
-  "3": 30px,
-);
 $layout-values: flex-start, flex-end, center, space-between, space-around;
 
 // base layout classes
@@ -59,6 +40,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     justify-content: $val;
   }
 }
+
 
 // col classes
 @include xs {
@@ -106,8 +88,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
   }
 }
-  flex-flow: row wrap;
-}
+
 
 // grid gaps
 @each $key, $val in $grid-gaps {
